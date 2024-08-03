@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Ponto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Folha de Ponto</h1>
+    <form id="dias-form">
+        <label for="nome">Nome do Funcionário:</label>
+        <input type="text" id="nome" required>
+        <label for="mes">Mês:</label>
+        <input type="text" id="mes" required>
+        <label for="dias-trabalhados">Quantos dias foram trabalhados?</label>
+        <input type="number" id="dias-trabalhados" required>
+        <label for="sabados-trabalhados">Quantos sábados foram trabalhados?</label>
+        <input type="number" id="sabados-trabalhados" required>
+        <button type="submit">Próximo</button>
+    </form>
+    <div id="dias-container"></div>
+    <div id="sabados-container"></div>
+    <h2>Saldo Total: <span id="saldo-total">--</span></h2>
+    <button onclick="window.print()">Imprimir</button>
+    <script src="script.js"></script>
+</body>
+</html>

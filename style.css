@@ -1,0 +1,158 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label {
+    margin-top: 10px;
+}
+input[type="text"], input[type="number"]{
+    margin: 5px 2px;
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}
+input[type="time"] {
+    margin: 5px 2px;
+    padding: 5px;
+    width: 100%;
+    max-width: 90px; /* Ajustado para caber em uma linha */
+    box-sizing: border-box;
+    font-size: 14px; /* Tamanho da fonte ajustado para melhor visualização */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 90px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+#dias-container, #sabados-container {
+    margin-top: 20px;
+}
+
+
+span {
+    /* display: block; */
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media print {
+    body {
+        font-size: 10px; /* Reduzir o tamanho da fonte para caber melhor na página A4 */
+        width: 100%;
+        margin: 0;
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        margin-top: 0px;
+    }
+    label{
+        margin-top: 0;
+    }
+    .days{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-direction: row;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    button {
+        display: none;
+    }
+
+    form {
+        display: none;
+    }
+
+    #dias-container, #sabados-container {
+        width: 100%;
+        margin-top: 0;
+        /* margin-bottom: 0; */
+    }
+    #sabados-container{
+        /* margin-bottom: -10px; */
+        margin-top: -20px;
+    }
+    input{
+        border: none;
+        margin: -10px;
+        padding: -5px;
+        margin-top: 0px;
+        font-size: 10px;
+        width: 70px;
+    }
+    span{
+        font-weight: bold;
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+        /* margin-top: -5px; */
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    /* Adicionando o nome do funcionário e o mês na impressão */
+    .print-header {
+        text-align: center;
+        /* margin-bottom: 5px; */
+    }
+
+    .print-header h1 {
+        font-size: 11px;
+    }
+
+    .print-header span {
+        display: block;
+        margin-top: 5px;
+        font-weight: normal;
+    }
+
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+}
