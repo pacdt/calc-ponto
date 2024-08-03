@@ -126,7 +126,7 @@ function gerarTabelas(dias, sabados) {
     // Adicionando o cabeçalho para impressão
     const printHeader = document.createElement('div');
     printHeader.className = 'print-header';
-    printHeader.innerHTML = `<h1>Folha de Ponto - ${nome}</h1><span>Mês: ${mes}</span>`;
+    printHeader.innerHTML = `<h1>${nome}</h1><span>Mês: ${mes}</span>`;
     document.body.insertBefore(printHeader, document.getElementById('dias-container'));
 
     for (let i = 1; i <= dias; i++) {
